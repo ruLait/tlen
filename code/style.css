@@ -1,0 +1,61 @@
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+
+	text-align: center;
+}
+
+html, body, #container {
+	height: 100%; width: 100%;
+	margin: 0 auto;
+}
+
+body {
+	background:
+		url(../img/nasty-anon.gif) bottom right no-repeat,
+		url(../img/noise.gif) center center repeat,
+		#000; /* "nasty-anon.gif" by NastyNya (vk.com/nyan_nya_nasty) */
+	overflow: hidden;
+}
+
+#container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+p {
+	font-family: "Ubuntu", Arial, sans-serif;
+	font-size: 3em;
+	cursor: default;
+
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+
+	-webkit-transition: 0.3s;
+	-moz-transition: 0.3s;
+	transition: 0.3s;
+}
+
+.radiva {
+	position: fixed;
+	top: 5px; left: 5px;
+}
+
+.radiva * {
+	color: #fff;
+}
+
+.radiva audio {
+	opacity: 0.2;
+
+	-webkit-transition: 0.3s;
+	-moz-transition: 0.3s;
+	transition: 0.3s;
+}
+
+.radiva audio:hover {
+	opacity: 0.6;
+}
