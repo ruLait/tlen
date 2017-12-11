@@ -2,18 +2,15 @@
 <html lang="ru"><head>
 	<meta charset="utf-8">
 	<title>tlen</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400&subset=latin">
 	<link rel="stylesheet" href="code/style.css">
 </head><body>
-	<div id="container">
-		<p class="tlen">tlen</p>
-		<div class="radiva">
-			<audio autoplay loop controls>
-				<source src="https://asp.radioca.st/s">
-				<span>Ваш браузер не поддерживает HTML5!</span>
-			</audio>
-		</div>
-	</div>
-	<script src="code/script.js" type="text/javascript" async></script>
+	<p class="tlen">tlen</p>
+	<audio class="player" src="https://radio.stereoscenic.com/asp-s" autoplay loop controls></audio>
+	<script>
+		setInterval(() => {
+			document.querySelector('.tlen').style.color = `#${((1 << 24) * Math.random() | 0).toString(16)}`
+		}, 250);
+	</script>
 </body></html>

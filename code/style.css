@@ -1,61 +1,53 @@
 * {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-
-	text-align: center;
+	margin: 0; padding: 0;
 }
 
-html, body, #container {
+:root {
+	--transition: all .3s ease-in-out;
+}
+
+html, body {
 	height: 100%; width: 100%;
 	margin: 0 auto;
 }
 
 body {
-	background:
-		url(../img/nasty-anon.gif) bottom right no-repeat,
-		url(../img/noise.gif) center center repeat,
-		#000; /* "nasty-anon.gif" by NastyNya (vk.com/nyan_nya_nasty) */
-	overflow: hidden;
-}
-
-#container {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+
+	background-image:
+		url('../img/nasty-anon.gif'), /* by NastyNya (vk.com/nyan_nya_nasty) */
+		url('../img/noise.gif');
+	background-position:
+		bottom right,
+		center center;
+	background-repeat:
+		no-repeat,
+		repeat;
+
+	overflow: hidden;
 }
 
-p {
-	font-family: "Ubuntu", Arial, sans-serif;
+.tlen {
+	font-family: 'Ubuntu', Arial, sans-serif;
 	font-size: 3em;
-	cursor: default;
+	color: rgba(255, 255, 255, .5);
+	text-align: center;
 
-	-webkit-user-select: none;
-	-moz-user-select: none;
+	cursor: default;
 	user-select: none;
 
-	-webkit-transition: 0.3s;
-	-moz-transition: 0.3s;
-	transition: 0.3s;
+	transition: var(--transition);
 }
 
-.radiva {
+.player {
 	position: fixed;
 	top: 5px; left: 5px;
+
+	opacity: .2;
+	transition: var(--transition);
 }
 
-.radiva * {
-	color: #fff;
-}
-
-.radiva audio {
-	opacity: 0.2;
-
-	-webkit-transition: 0.3s;
-	-moz-transition: 0.3s;
-	transition: 0.3s;
-}
-
-.radiva audio:hover {
-	opacity: 0.6;
-}
+.player:hover { opacity: .6 }
